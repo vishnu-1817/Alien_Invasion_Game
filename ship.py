@@ -1,14 +1,15 @@
 import pygame
+from pygame.sprite import Sprite
 
 """In Pygame, the origin (0, 0) is at the top-left corner of the screen, and coordinates 
 increase as you go down and to the right.
 """
 
-class Ship():
+class Ship(Sprite):
 
     def __init__(self,ai_settings, screen):
         # screen : the place where we'll draw the ship
-
+        super().__init__()
         self.screen = screen
 
         self.image = pygame.image.load('images/ship1jpeg-removebg.png')
